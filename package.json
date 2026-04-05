@@ -1,0 +1,13 @@
+{
+  "name": "american-bhau-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "pdf-lib": "^1.17.1"
+  }
+}
