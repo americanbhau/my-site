@@ -35,6 +35,7 @@ body {
   background: var(--cream);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img { display: block; max-width: 100%; }
