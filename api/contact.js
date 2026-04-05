@@ -48,15 +48,6 @@ export default async function handler(req, res) {
   const contactPayload = {
     displayName: name.trim(),
     identifiers,
-    attributes: {
-      businessName:  business.trim()  || '',
-      businessType:  bizType?.trim()  || '',
-      location:      location?.trim() || '',
-      platforms:     platforms?.trim()|| '',
-      goal:          goal?.trim()     || '',
-      source:        'americanbhau-website',
-      submittedAt:   new Date().toISOString(),
-    },
   };
 
   try {
@@ -75,6 +66,10 @@ export default async function handler(req, res) {
     const birdData = await birdRes.json();
 
     if (!birdRes.ok) {
+      // Contact already exists — that's fine, they're already in the CRM
+      if (birdData.code === 'ResourceAlreadyExists') {
+        return res.status(200).json({ success: true, existing: true });
+      }
       console.error('Bird API error:', birdData);
       return res.status(502).json({ error: 'Failed to save contact', detail: birdData });
     }
