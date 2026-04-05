@@ -21,10 +21,10 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'Plus Jakarta Sans', sans-serif;
 
-  --radius-sm:  8px;
-  --radius-md:  14px;
-  --radius-lg:  20px;
-  --radius-xl:  28px;
+  --radius-sm:  10px;
+  --radius-md:  16px;
+  --radius-lg:  22px;
+  --radius-xl:  30px;
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
