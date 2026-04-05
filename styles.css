@@ -361,10 +361,42 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(255,255,255,0.1);
 }
 
+.biz-card--stat {
+  background: var(--accent);
+  color: var(--black);
+  justify-content: center;
+  border: none;
+}
+
+.stat-big {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.65;
+  line-height: 1.4;
+  display: block;
+}
+
 .biz-icon {
   font-size: 22px;
   line-height: 1;
   margin-bottom: 4px;
+}
+
+.biz-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 4px;
+  border-radius: 6px;
 }
 
 .biz-card--wide .biz-icon {
@@ -385,36 +417,6 @@ a { color: inherit; text-decoration: none; }
   opacity: 0.6;
 }
 
-.hero-badge-float {
-  position: absolute;
-  bottom: 28px;
-  left: -20px;
-  background: var(--accent);
-  color: var(--white);
-  padding: 14px 20px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  box-shadow: 0 10px 32px rgba(255,222,90,0.25);
-  animation: float 3.2s ease-in-out infinite;
-}
-
-.badge-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.badge-label {
-  font-size: 11px;
-  font-weight: 600;
-  opacity: 0.65;
-  white-space: nowrap;
-  display: block;
-  margin-top: 2px;
-}
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -832,6 +834,18 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   flex-shrink: 0;
   font-family: var(--font-body);
+  overflow: hidden;
+}
+
+.t-avatar--img {
+  background: var(--bg-card, #1a1a1a);
+}
+
+.t-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .t-info strong {
@@ -1187,7 +1201,6 @@ a { color: inherit; text-decoration: none; }
   .hero-visual         { order: -1; }
   .hero-portrait-wrap  { max-width: 220px; margin: 0 auto; }
   .hero-collage-wrap   { max-width: 100%; }
-  .hero-badge-float    { left: -10px; bottom: 16px; padding: 10px 14px; }
   .badge-num           { font-size: 20px; }
 
   .about-inner         { grid-template-columns: 1fr; gap: 48px; }
